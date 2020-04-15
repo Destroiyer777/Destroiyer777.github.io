@@ -323,14 +323,14 @@ window.onkeyup = function(e) {
 		space = false;
 	}
 }
-window.onmousemove = function(e) {
+window.ontouchmove = function(e) {
 	var rect = canvas.getBoundingClientRect();
-	mouseX = e.clientX - rect.left;
+	mouseX = e.touches[0].clientX - rect.left;
 }
-window.onmousedown = function() {
+window.ontouchstart = function() {
 	mouse = true;
 }
-window.onmouseup = function() {
+window.ontouchend = function() {
 	mouse = false;
 }
 var update = function() {
