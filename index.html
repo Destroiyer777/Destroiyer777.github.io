@@ -327,8 +327,10 @@ window.ontouchmove = function(e) {
 	var rect = canvas.getBoundingClientRect();
 	mouseX = e.touches[0].clientX - rect.left;
 }
-window.ontouchstart = function() {
+window.ontouchstart = function(e) {
 	mouse = true;
+	var rect = canvas.getBoundingClientRect();
+	mouseX = e.touches[0].clientX - rect.left;
 }
 window.ontouchend = function() {
 	mouse = false;
