@@ -324,15 +324,18 @@ window.onkeyup = function(e) {
 	}
 }
 window.ontouchmove = function(e) {
+	e.preventDefault();
 	var rect = canvas.getBoundingClientRect();
 	mouseX = e.touches[0].clientX - rect.left;
 }
 window.ontouchstart = function(e) {
+	e.preventDefault();
 	mouse = true;
 	var rect = canvas.getBoundingClientRect();
 	mouseX = e.touches[0].clientX - rect.left;
 }
-window.ontouchend = function() {
+window.ontouchend = function(e) {
+	e.preventDefault();
 	mouse = false;
 }
 var update = function() {
